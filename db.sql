@@ -1,13 +1,31 @@
 -- for help
+-- killing nginx and restarting again
+sudo fuser -k 443/tcp
 
 -- list database
 
 -- create database
+create database [database name]
+
+-- list all databases
+\list
+
+-- connect to db 
+\connect [dbname] or \c [dbname]
+
+
+
 
 -- list all tables
 \d  -- this lists all the tables
 \d [table name] -- shows details about the table
 \l -- lists all the databases created
+\du -- gives the list of users present
+\conninfo -- gives the info about the database and the user that is connected to currently
+
+-- where to modify the auth behaviour
+cd /etc/postgresql/12/main 
+sudo vi pg_hba.conf
 
 
 -- creating and altering tables

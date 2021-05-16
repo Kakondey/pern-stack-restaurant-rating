@@ -83,7 +83,7 @@ router.put("/:id", (request, response, next) => {
 // });
 
 // delete restaurant
-router.delete("/:id", (request, response) => {
+router.delete("/:id", (request, response, next) => {
   const { id } = request.params;
 
   pool.query(`DELETE FROM restaurants WHERE id = ($1)`, [id], (err, res) => {

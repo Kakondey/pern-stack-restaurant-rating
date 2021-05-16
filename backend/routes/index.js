@@ -4,7 +4,7 @@ const reviews = require("./reviews");
 
 const router = Router();
 
-router.use("/restaurants", restaurants);
-router.use("/restaurants", reviews);
+router.use("/api/v1/restaurants", restaurants);
+router.use("/api/v1/restaurants", reviews);
 
 module.exports = router;
